@@ -1,30 +1,104 @@
 ---
-title: "example-report"
+title: "Open research at Oxford - survey results - executive summary"
+subtitle: "Reproducible Research Oxford (RROx) - https://ox.ukrn.org/"
 output:
-  officedown::rdocx_document:
+  bookdown::word_document2:
     reference_docx: "template-lyngs.docx"
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+Open research is achieved when different elements of the research process are transparent and accessible.
+The aim of this survey was to assess the views of Oxford researchers on **open research practices** (ORPs), related training needs and provision, and recruitment criteria.
+The survey was circulated to all Oxford postgraduate research (PGR) students working in any Division of the University (Hum; MPLS; MSD; SSD; ContEd) through Divisional and College communication channels (newsletters and/or direct email) between 12 January and 1 March 2021.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+A total of **499 PGR students (7.1%** of the total number registered in January 2021) participated in the survey.
+Of these, 123 (24.6%) dropped out at various points during completion.
+All responses provided are included in the results.
+Representativeness per Division ranged from 4.3% (ContEd) to 8.5% (MSD)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Main results
 
-```{r cars, fig.cap="This is great"}
-summary(cars)
+-   **Awareness** and usage of ORPs varies per Division (Fig. 1) but demand for training is equally strong (Fig. 2)
+-   In all Divisions, the majority of respondents judged that the **widespread adoption** of ORPs would be beneficial. A small number indicated potential **downsides**, including for example concerns over intellectual property, ethics, and the cost of Open Access publishing.
+-   Respondents reported several **barriers** to adoption of the different ORPs, relating to lack of infrastructure, training, norms, incentives, and policies.
+-   Options for **support** to facilitate the adoption of ORPs such as online resources, mentoring, and support networks were judged useful or essential by the vast majority of respondents.
+-   Contrasting **perceived current recruitment criteria** and **desired recruitment criteria** highlights a strong desire to emphasize quality of research over number of publications, prestige of publication outlets, number of citations, and amount of grant support. Respondents also thought that teaching, mentoring, and open research practices should be valued more than they currently are.
+
+```{r, fig.cap="Distribution of responses for awareness of ORPs across Divisions. Definitions of each practice are in Appendix I. N = 440 PGR students (ContEd: 5, Hum: 67, MPLS: 183, MSD: 123, SSD: 62)."}
+knitr::include_graphics("figures/awareness_chart.png")
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, fig.cap="This is great", echo=FALSE}
-plot(pressure)
+```{r, fig.cap="Distribution of responses for proposed training provision across Divisions. Training descriptions can be found in Appendix II. N = 376 PGR students (ContEd: 4, Hum: 57, MPLS: 154, MSD: 109, SSD: 52)."}
+knitr::include_graphics("figures/training_chart.png")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Recommendations for future RROx priorities (if provided with continued funding and support)
+
+-   Administer the **survey** to academics, research staff/fellows, and research support staff.
+-   Develop and provide formal **training** on ORPs to raise awareness and usage.
+-   Continue building **communities** to act as support networks, and develop a **mentoring** programme.
+-   **Coordinate activity** with related efforts across the Collegiate University to alleviate barriers to the adoption of ORPs. Relevant units include Open Scholarship Support, Bodleian Libraries; Research Data Management, IT Services; Ethics and Integrity, Research Services; Research Staff Hub.
+-   Contribute to implementation of the Declaration on Research Assessment (**DORA**).
+-   Liaise with University governance to develop **incentives** and **policies** (e.g. award programme, grant schemes), in collaboration with relevant stakeholders (e.g. funders, publishers) via the **UK Reproducibility Network** (UKRN).
+
+*These survey results from PGR students should not be shared widely as we expect to administer the survey to all other researchers in a second round, and we wish not to bias the answers of future respondents. A detailed report of all results will be circulated afterwards. The full survey text can be found at <https://doi.org/10.5281/zenodo.4433688>.*
+
+*This report was prepared by Malika Ihle^1^, Dorothy Bishop^2^ and Laura Fortunato^1^ (^1^Reproducible Research Oxford Coordinator, [malika.ihle\@anthro.ox.ac.uk](mailto:malika.ihle@anthro.ox.ac.uk), ^1^Institute of Cognitive and Evolutionary Anthropology, ^2^Department of Experimental Psychology) in April 2021.*
+
+\newpage
+
+### Appendix I: **Definitions of open research practices and related terms (as presented to respondents)**
+
+**Open Access publication** An article, book chapter, book, or other scholarly work that is released with unrestricted access (i.e. available to the public to view online, or download, without registration, payment, or approval).
+This includes all forms of open access, such as 'green' (i.e. the accepted version of the work, after peer review, is shared by the author(s) in a repository), and 'gold' (i.e. the version processed by the publisher is released openly on the publisher's system upon publication).
+
+**Repository** A service dedicated to facilitating the preservation and sharing of research content, including digital repositories (for digital collections, data, code, etc.) and physical repositories (for collections, archives, reagents, specimens, etc.).
+The service may be operated by universities, governments, or private organizations, and it can be domain-agnostic or discipline-specific.
+Access to such repositories may be open or controlled (e.g. requiring registration, payment, or approval).
+Personal web-pages or other ad hoc methods of storing and sharing research content are not included.
+
+**Data** Any information underpinning a piece of research.
+The information can be qualitative (e.g. source, archive, representation of art, artefact) and/or quantitative (e.g. measurements, machine output, simulation results).
+The data can be raw (i.e. as collected), cleaned (i.e. corrected for errors), or prepared/processed (e.g. transformed into a different format for analysis, or anonymized for sharing).
+
+**Code** Custom software developed by researchers specifically for the purpose of conducting a piece of research (e.g. a computer program to extract, clean, or analyse data, or to generate simulation results), or to build components of a research data infrastructure (e.g. a data repository).
+
+**Materials** Any element of the research process that can be coded digitally or shared physically (e.g. protocols, survey questions, instructions, intervention materials, videos of the study procedure, specimens, reagents, samples, and other items used to collect data and/or conduct the research).
+
+**Preprint** An article, book chapter, book, or other scholarly work that is deposited in a repository ahead of peer review.
+Equivalent terms used in some disciplines are 'working papers' and 'unpublished manuscripts'.
+
+**Preregistration** The practice by which researchers specify elements of the planned work in a dedicated registry before observing the outcomes of the work.
+Examples include description of the planned approach for a qualitative study, and the data analysis plan for a quantitative study (i.e. a 'pre-analysis plan', which can be submitted either before the start of data collection or for previously collected datasets, before the start of data analysis).
+
+**Registered report** A journal article format in which research question(s) and methodology are peer-reviewed before the work is conducted.
+A submission may be provisionally accepted for publication following peer-review, and eventually published if the authors follow through with the methodology specified in the accepted version (deviations from the registered plan are allowed, but they must be explicitly justified and noted as such).
+Acceptance of the article to the journal is therefore independent of the results obtained.
+
+\newpage
+
+### **Appendix II: Training options (descriptions presented to respondents)**
+
+**Open Access -** How to publish **open access** articles, theses, or monographs
+
+**Data Management -** How to prepare **data management plans**
+
+**FAIR Data -** How to prepare **data** and **metadata** for archiving, and possibly for sharing in a public repository in line with community standards 
+
+**Ethics -** How to prepare **ethics** applications that allow archiving of anonymised data in a public repository
+
+**Code -** How to write good quality **code** (including unit testing, version control, reproducible documentation) and share it publicly (e.g. selection of a repository that assigns a DOI)
+
+**Materials -** How to prepare **materials** for sharing (e.g. in a digital repository that assigns a DOI, or in a physical repository)
+
+**Licences -** How to choose and apply **licences** for sharing resources (e.g. data, materials, and/or code) and navigate relevant **legislation** (including copyright law, privacy and GDPR law, commercial law, and institutional regulations)
+
+**Preregistration -** How to prepare **preregistrations** and/or **registered reports** (including experimental design, statistics, data simulation) 
+
+**Preprints -** Guidance on sharing **preprints** (e.g. selection of appropriate repository, consideration of publisher's rights, ethical considerations)
+
+**Recruitment -** How to assess **job applications** responsibly, fairly, and transparently

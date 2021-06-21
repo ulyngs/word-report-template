@@ -2,15 +2,20 @@
 title: "Open research at Oxford - survey results - executive summary"
 subtitle: "Reproducible Research Oxford (RROx) - https://ox.ukrn.org/"
 output:
+  pagedreport::paged_grid:
+    logo: "https://ukrn.blogs.bristol.ac.uk/files/2020/09/UKRN-Logo-150-extra2.png"
+    number_sections: false
   bookdown::word_document2:
     reference_docx: "template-lyngs.docx"
     number_sections: false
+main-color: "#6cabdd"
 ---
-
+  
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# Introduction
 Open research is achieved when different elements of the research process are transparent and accessible.
 The aim of this survey was to assess the views of Oxford researchers on **open research practices** (ORPs), related training needs and provision, and recruitment criteria.
 The survey was circulated to all Oxford postgraduate research (PGR) students working in any Division of the University (Hum; MPLS; MSD; SSD; ContEd) through Divisional and College communication channels (newsletters and/or direct email) between 12 January and 1 March 2021.
